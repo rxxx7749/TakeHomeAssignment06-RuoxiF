@@ -8,15 +8,15 @@ import java.io.Serializable;
  */
 public class Tip implements Serializable {
     //declare the global variables
-    private double total;
-    private double salesTax;
-    private double tip;
-    private double grandTotal;
+    private String total;
+    private String salesTax;
+    private String tip;
+    private String grandTotal;
 
     /**
      * Constructor with instance variable total, salesTax, tip, grandTotal
      */
-    public Tip(double total, double salesTax, double tip, double grandTotal) {
+    public Tip(String total, String salesTax, String tip, String grandTotal) {
         this.total = total;
         this.salesTax = salesTax;
         this.tip = tip;
@@ -28,7 +28,7 @@ public class Tip implements Serializable {
      *
      * @param total
      */
-    public void setTotal(double total) {
+    public void setTotal(String total) {
         this.total = total;
     }
 
@@ -37,7 +37,7 @@ public class Tip implements Serializable {
      *
      * @param salesTax
      */
-    public void setSalesTax(double salesTax) {
+    public void setSalesTax(String salesTax) {
         this.salesTax = salesTax;
     }
 
@@ -46,7 +46,7 @@ public class Tip implements Serializable {
      *
      * @param tip
      */
-    public void setTip(double tip) {
+    public void setTip(String tip) {
         this.tip = tip;
     }
 
@@ -55,7 +55,7 @@ public class Tip implements Serializable {
      *
      * @param grandTotal
      */
-    public void setGrandTotal(double grandTotal) {
+    public void setGrandTotal(String grandTotal) {
         this.grandTotal = grandTotal;
     }
 
@@ -64,7 +64,7 @@ public class Tip implements Serializable {
      *
      * @return total
      */
-    public double getTotal() {
+    public String getTotal() {
         return total;
     }
 
@@ -73,7 +73,7 @@ public class Tip implements Serializable {
      *
      * @return salesTax
      */
-    public double getSalesTax() {
+    public String getSalesTax() {
         return salesTax;
     }
 
@@ -82,7 +82,7 @@ public class Tip implements Serializable {
      *
      * @return tip
      */
-    public double getTip() {
+    public String getTip() {
         return tip;
     }
 
@@ -91,7 +91,7 @@ public class Tip implements Serializable {
      *
      * @return grandTotal
      */
-    public double getGrandTotal() {
+    public String getGrandTotal() {
         return grandTotal;
     }
 

@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import java.text.NumberFormat;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -50,10 +51,12 @@ public class MainActivity extends AppCompatActivity {
         double taxPercentageValue = Double.valueOf(taxPercentage.getText().toString());
         double tipPercentageValue = Double.valueOf(tipPercentage.getText().toString());
         //calculations
+
         double salesTax = amountValue * taxPercentageValue;
         double tipValue = amountValue * tipPercentageValue;
         double grandTotal = amountValue + salesTax + tipValue;
-        Tip tip = new Tip(amountValue, salesTax, tipValue, grandTotal);
+        NumberFormat nf = NumberFormat.getCurrencyInstance();
+        Tip tip = new Tip(nf.format(amountValue),nf.format(salesTax),nf.format(tipValue),nf.format(grandTotal));
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra(Keys.TIP_INFO_KEY, tip);
         startActivity(intent);
