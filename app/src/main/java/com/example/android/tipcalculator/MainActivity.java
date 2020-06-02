@@ -16,6 +16,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     //declare global variables
+    //first commit
     private EditText amount;
     private EditText taxPercentage;
     private EditText tipPercentage;
